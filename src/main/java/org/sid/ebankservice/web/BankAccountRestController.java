@@ -12,7 +12,7 @@ import java.util.UUID;
 public class BankAccountRestController {
     private BankAccountRepository bankAccountRepository;
 
-    //CRéation d'un constructeur qui est plus recommander dans la pratique que l'annotation @Autowired
+    //Création d'un constructeur qui est plus recommander dans la pratique que l'annotation @Autowired
 
     public BankAccountRestController(BankAccountRepository bankAccountRepository){
         this.bankAccountRepository = bankAccountRepository;
@@ -21,6 +21,7 @@ public class BankAccountRestController {
     //Création d'une liste de compte qui nous permettra d'afficher tous les comptes qui sont présents
     @GetMapping("/bankAccounts")
     public List<BankAccount> bankAccounts(){
+
         return bankAccountRepository.findAll();
     }
 
