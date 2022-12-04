@@ -2,7 +2,6 @@ package org.sid.ebankservice.web;
 
 import org.sid.ebankservice.entities.BankAccount;
 import org.sid.ebankservice.repository.BankAccountRepository;
-<<<<<<< HEAD
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,18 +13,6 @@ public class BankAccountRestController {
     private BankAccountRepository bankAccountRepository;
 
     //Création d'un constructeur qui est plus recommander dans la pratique que l'annotation @Autowired
-=======
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-@RestController
-public class BankAccountRestController {
-    private BankAccountRepository bankAccountRepository;
-
-    //CRéation d'un constructeur qui est plus recommander dans la pratique que l'annotation @Autowired
->>>>>>> c8517da (v1.0)
 
     public BankAccountRestController(BankAccountRepository bankAccountRepository){
         this.bankAccountRepository = bankAccountRepository;
@@ -34,10 +21,7 @@ public class BankAccountRestController {
     //Création d'une liste de compte qui nous permettra d'afficher tous les comptes qui sont présents
     @GetMapping("/bankAccounts")
     public List<BankAccount> bankAccounts(){
-<<<<<<< HEAD
 
-=======
->>>>>>> c8517da (v1.0)
         return bankAccountRepository.findAll();
     }
 
@@ -49,7 +33,6 @@ public class BankAccountRestController {
 
     }
 
-<<<<<<< HEAD
     //Ajout de compte
     //Test avec Postman
     @PostMapping("/bankAccounts")
@@ -70,7 +53,5 @@ public class BankAccountRestController {
         bankAccountRepository.deleteById(id);
     }
 
-=======
->>>>>>> c8517da (v1.0)
 
 }
