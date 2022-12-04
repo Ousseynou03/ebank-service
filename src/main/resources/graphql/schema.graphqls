@@ -3,6 +3,10 @@
      bankAccountById(id : String): BankAccount
  }
 
+ type Mutation {
+
+ }
+
 type BankAccount {
     id : String,
     createdAt : Float,
